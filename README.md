@@ -1,0 +1,1 @@
+# Yandex_practicum_QA_diploma_part2_Rukavishnikova_Tatiana_15cogorta
