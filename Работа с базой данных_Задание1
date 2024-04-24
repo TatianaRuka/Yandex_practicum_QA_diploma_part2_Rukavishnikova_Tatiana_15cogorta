@@ -1,0 +1,11 @@
+Задание 1
+проверить, отображается ли созданный заказ в базе данных.
+Для этого: выведи список логинов курьеров с количеством их заказов в статусе «В доставке» (поле inDelivery = true).
+У psql есть особенность: если таблица в базе данных с большой буквы, то её в запросе нужно брать в кавычки. Например, select * from “Orders”.
+
+Решение SQL-запрос:
+SELECT "Couriers".login, COUNT("Orders".inDelivery) AS total_orders
+FROM "Couriers"
+JOIN "Orders" ON "Couriers".id = "Orders".courierId
+WHERE "Orders".inDelivery = true
+GROUP BY "Couriers".login;
